@@ -9,3 +9,7 @@ Sedona](https://sedona.apache.org).
 * Learn about [Wherobots](https://www.wherobots.com)
 * [Login to Wherobots](https://www.wherobots.services)
 * [Documentation](https://docs.wherobots.services)
+
+👷 Interested in working at Wherobots? Check out our
+[Careers](https://www.wherobots.com/careers) page and our
+[openings](https://jobs.ashbyhq.com/wherobots)!
