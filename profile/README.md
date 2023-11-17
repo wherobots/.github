@@ -7,7 +7,7 @@ trusted in production and at scale. By the original creators of [Apache
 Sedona](https://sedona.apache.org).
 
 * Learn about [Wherobots](https://www.wherobots.com)
-* [Login to Wherobots](https://www.wherobots.services)
+* [Login to Wherobots](https://wherobots.services)
 * [Documentation](https://docs.wherobots.services)
 
 👷 Interested in working at Wherobots? Check out our
