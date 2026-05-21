@@ -9,12 +9,12 @@
 # Source workflow:
 #   https://github.com/wherobots/ci-tools/blob/main/.github/workflows/sync-templates.yaml
 
-issuer: https://token.actions.githubusercontent.com
-
 # Pin the subject to ci-tools' main branch. The job_workflow_ref claim below
 # additionally pins the exact workflow file, so a second workflow added to
-# ci-tools/main cannot mint these tokens.
-subject_pattern: ^repo:wherobots/ci-tools:ref:refs/heads/main$
+# ci-tools/main cannot mint these tokens — ci-tools has many workflows on
+# main, so this extra pin actually matters.
+issuer: https://token.actions.githubusercontent.com
+subject: repo:wherobots/ci-tools:ref:refs/heads/main
 
 claim_pattern:
   job_workflow_ref: ^wherobots/ci-tools/\.github/workflows/sync-templates\.yaml@refs/heads/main$
