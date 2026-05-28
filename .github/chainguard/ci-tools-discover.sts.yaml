@@ -1,0 +1,27 @@
+# octo-sts trust policy for the ci-tools-discover identity.
+#
+# Used by the discover job in the ci-tools sync-templates workflow to list
+# wherobots org repos and identify subscribers via the presence of a
+# `.ci-tools.yml` marker file at each repo root.
+#
+# Org-scoped: minted with `scope: wherobots`. The minimal permissions
+# (metadata + contents read) keep the token safe even though it can reach
+# every repo in the org. The companion `sync-templates` policy carries the
+# write permissions for the per-repo sync step.
+#
+# Source workflow:
+#   https://github.com/wherobots/ci-tools/blob/main/.github/workflows/sync-templates.yaml
+
+# Pin the subject to ci-tools' main branch. The job_workflow_ref claim below
+# additionally pins the exact workflow file, so a second workflow added to
+# ci-tools/main cannot mint these tokens.
+issuer: https://token.actions.githubusercontent.com
+subject: repo:wherobots/ci-tools:ref:refs/heads/main
+
+claim_pattern:
+  job_workflow_ref: ^wherobots/ci-tools/\.github/workflows/sync-templates\.yaml@refs/heads/main$
+
+# Smallest token surface the discover job needs.
+permissions:
+  metadata: read
+  contents: read
