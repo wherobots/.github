@@ -20,6 +20,10 @@ claim_pattern:
   job_workflow_ref: ^wherobots/ci-tools/\.github/workflows/sync-templates\.yaml@refs/heads/main$
 
 # Smallest token surface that peter-evans/create-pull-request needs.
+# `workflows` is required on top of `contents`: the sync's whole job is to
+# push files under `.github/workflows/` in subscribers, and GitHub rejects
+# any App-token push touching that path without it.
 permissions:
   contents: write
   pull_requests: write
+  workflows: write
