@@ -2,8 +2,7 @@
 
 # Wherobots
 
-Wherobots is the cloud-native spatial data analytics & AI platform,
-trusted in production and at scale. By the original creators of [Apache
+Wherobots is the most capable cloud for earth intelligence and physical world data at any scale. By the original creators of [Apache
 Sedona](https://sedona.apache.org).
 
 * Learn about [Wherobots](https://www.wherobots.com)
@@ -11,5 +10,4 @@ Sedona](https://sedona.apache.org).
 * [Documentation](https://docs.wherobots.com)
 
 👷 Interested in working at Wherobots? Check out our
-[Careers](https://www.wherobots.com/careers) page and our
-[openings](https://jobs.ashbyhq.com/wherobots)!
+[Careers](https://www.wherobots.com/careers) page!
